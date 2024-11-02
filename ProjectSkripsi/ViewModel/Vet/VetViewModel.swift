@@ -6,8 +6,6 @@
 //
 
 
-
-
 import Foundation
 import MapKit
 
@@ -27,7 +25,7 @@ class VetViewModel: ObservableObject {
         vets = [
             VetModel(
                 imageName: "dog",
-                vetName: "Happy Paws Veterinary Clinic",
+                vetName: "Happy Paws",
                 rating: 5,
                 range: 1.2,
                 closingTime: "6:00 PM",

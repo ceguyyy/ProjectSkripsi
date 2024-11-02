@@ -17,7 +17,7 @@ struct VetCardComponent: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
             VStack(alignment: .leading,spacing: 8){
                 Text(vet.vetName)
-
+                
                     .padding(.bottom, 2)
                     .font(.system(size: 22, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -56,7 +56,7 @@ struct VetCardComponent: View {
                     .foregroundColor(.black)
                     .foregroundColor(Color("TextColor"))
                     .lineLimit(2)
-                   
+                
             }
             .padding(12)
             
@@ -67,7 +67,7 @@ struct VetCardComponent: View {
         .frame(width: 361)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .cornerRadius(10)
-
+        
     }
 }
 

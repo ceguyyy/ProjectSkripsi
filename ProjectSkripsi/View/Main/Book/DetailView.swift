@@ -52,7 +52,7 @@ struct DetailView: View {
                         ScrollView{
                             VStack(){
                                 ForEach(doctorViewModel.doctors) { doctor in
-                                    DoctorListComponent(doctor: doctor, user: user)
+                                    DoctorListComponent(doctor: doctor, user: user).environmentObject(router)
                                 }
                                 .onAppear {
                                     doctorViewModel.filterDoctors(by: vet.vetName)
@@ -75,23 +75,23 @@ struct DetailView: View {
     }
 }
 
-#Preview {
-    let sampleVet = VetModel(
-        imageName: "dog",  // Ensure this image exists in your assets
-        vetName: "Happy Paws",
-        rating: 5,
-        range: 5.6,
-        closingTime: "5 PM",
-        address: "123 Vet St, Pet City",
-        latitude: "1",
-        longitude: "1"
-    )
-    
-    let sampleUser = UserModel(
-        name: "John Doe", email: "johndoe@example.com", password: "password123", role: "User",
-        phone: "123-456-7890", address: "123 Main St, Anytown, USA")
-    
-    DetailView(vet: sampleVet, user: sampleUser)
-}
+//#Preview {
+//    let sampleVet = VetModel(
+//        imageName: "dog",  // Ensure this image exists in your assets
+//        vetName: "Happy Paws",
+//        rating: 5,
+//        range: 5.6,
+//        closingTime: "5 PM",
+//        address: "123 Vet St, Pet City",
+//        latitude: "1",
+//        longitude: "1"
+//    )
+//    
+//    let sampleUser = UserModel(
+//        name: "John Doe", email: "johndoe@example.com", password: "password123", role: "User",
+//        phone: "123-456-7890", address: "123 Main St, Anytown, USA")
+//    
+//    DetailView(vet: sampleVet, user: sampleUser, router: router)
+//}
 
 

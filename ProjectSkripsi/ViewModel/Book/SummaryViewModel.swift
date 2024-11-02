@@ -1,3 +1,11 @@
+//
+//  SummaryViewModel.swift
+//  ProjectSkripsi
+//
+//  Created by Christian Gunawan on 02/11/24.
+//
+
+
 // SummaryViewModel.swift
 // ProjectSkripsi
 // Created by Christian Gunawan on 02/11/24.
@@ -14,7 +22,7 @@ class SummaryViewModel: ObservableObject {
             date: selectedDate,
             time: DateFormatter.localizedString(from: selectedTime, dateStyle: .none, timeStyle: .short),
             doctor: selectedDoctor.name,
-            petName: selectedPet.name,
+            petname: selectedPet.name,
             notes: inputText.isEmpty ? "No notes provided" : inputText
         )
         

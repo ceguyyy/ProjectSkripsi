@@ -11,4 +11,4 @@ enum DetailEnum: String, CaseIterable, Identifiable {
     case information = "Information"
     
     var id: String { self.rawValue }
-  }
+}

@@ -8,10 +8,23 @@
 import SwiftUI
 
 @main
-struct ProjectSkripsiApp: App {
+struct VetHereiOSSkripsiApp: App {
+    @StateObject private var appRouter = AppRouter()
+    @StateObject private var userViewModel = UserViewModel()
+    @StateObject private var vetViewModel = VetViewModel()
+    @StateObject private var doctorViewModel = DoctorViewModel()
+    @StateObject private var bookViewModel = BookViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+                    .environmentObject(userViewModel)
+                    .environmentObject(appRouter)
+                    .environmentObject(vetViewModel)
+                    .environmentObject(doctorViewModel)
+                    .environmentObject(bookViewModel)
+            }
         }
     }
 }

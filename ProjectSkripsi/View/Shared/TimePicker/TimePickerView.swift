@@ -1,3 +1,13 @@
+//
+//  TimePickerView.swift
+//  ProjectSkripsi
+//
+//  Created by Christian Gunawan on 02/11/24.
+//
+
+
+import SwiftUI
+
 struct TimePickerView: View {
     @Binding var selectedTime: Date
     @Binding var isPresented: Bool
@@ -17,5 +27,15 @@ struct TimePickerView: View {
             }
             .padding()
         }
+    }
+}
+
+struct TimePickerView_Previews: PreviewProvider {
+    @State static var selectedTime = Date()
+    @State static var isPresented = true
+
+    static var previews: some View {
+        TimePickerView(selectedTime: $selectedTime, isPresented: $isPresented)
+            .padding() // Optional padding for the preview
     }
 }

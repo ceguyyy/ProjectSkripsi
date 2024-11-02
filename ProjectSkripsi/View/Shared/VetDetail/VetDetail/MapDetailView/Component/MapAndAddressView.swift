@@ -38,7 +38,6 @@ struct MapAndAddressComponent_Previews: PreviewProvider {
             range: 2.5,
             closingTime: "6 PM",
             address: "123 Pet Lane, Pet City",
-            doctors: [],
             latitude: "-6.3020781",
             longitude: "106.6522981"
         )

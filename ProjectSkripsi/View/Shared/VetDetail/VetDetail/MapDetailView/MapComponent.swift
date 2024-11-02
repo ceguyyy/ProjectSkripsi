@@ -25,7 +25,6 @@ struct MapComponent: View {
         .onAppear {
             viewModel.updateRegion(latitude: viewModel.region.center.latitude, longitude: viewModel.region.center.longitude)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

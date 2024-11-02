@@ -17,4 +17,5 @@ struct PetModel: Identifiable {
     var DOB: Date
     var breed: String?
     var color: String?
+    var owner: String
 }
